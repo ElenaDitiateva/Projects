@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <h2>Form validator</h2>
+    <form class="contact_form formBox" action="#" id="myform">
+        <div>
+            <label>
+                <p class="form_indent">Имя</p>
+                <input class="form_input userName" type="text" name="name" id="name" placeholder="Your Name">
+            </label>
+        </div>
+        <div>
+            <label>
+                <p class="form_indent">Телефон</p>
+                <input class="form_input userPhone" type="text" name="phone" id="phone" placeholder="+7(000)000-00-00">
+            </label>
+        </div>
+        <div>
+            <label>
+                <p class="form_indent">Email</p>
+                <input class="form_input userEmail" type="email" name="email" id="email" placeholder="Your E-mail">
+            </label>
+        </div>
+        <div>
+            <label>
+                <p class="form_indent">Текст</p>
+                <textarea class="form_textarea userСomment" cols="30" rows="10" placeholder="Your message"></textarea>
+            </label>
+        </div>
+        <button type="submit" class="form_button submit" id="val-btn">Отправить</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js" type="text/javascript"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        window.onload = () => {
+            document.getElementById('myform').addEventListener('submit', e => {
+                let valid = new Validator('myform');
+                if (!valid.valid) {
+                    e.preventDefault();
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>

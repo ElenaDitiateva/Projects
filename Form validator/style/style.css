@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 30px 50px;
+    background-color: #f8f8ff;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.form_indent {
+    margin: 20px 0 5px 0;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input {
+    width: 410px;
+    padding: 5px 20px;
+    height: 40px;
+    border: 1px solid #b2bec3;
+    outline: none;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.userName {
+    text-transform: capitalize;
+}
+
+.form_textarea {
+    width: 410px;
+    height: 80px;
+    padding: 10px 20px;
+    border: 1px solid #b2bec3;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    text-transform: capitalize;
+}
+
+.form_button {
+    margin-top: 30px;
+    width: 200px;
+    background: #ffd12c;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    padding: 12px 40px;
+    border: 1px solid #fbd146;
+    box-sizing: border-box;
+}
+
+.form_button:hover {
+    background: #ffe033;
+}
+
+.form_error {
+    background: #fab1a0;
+}
+
+.error-msg {
+    color: red;
+    margin: 10px 0;
+}
+
+.invalid {
+    border: 2px solid red;
+}
+
+.valid {
+    border: 2px solid green;
+}
