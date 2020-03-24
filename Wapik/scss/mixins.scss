@@ -1,0 +1,106 @@
+@mixin logo {
+    text-decoration: none;
+    font-family: ProximaNova, Arial, sans-serif;
+    font-size: 28.8px;
+    line-height: 46px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+@mixin font-nav {
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+@mixin font-main {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #83a7a5;
+}
+
+@mixin font-main-txt {
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 400;
+    color: #83a7a5;
+}
+
+@mixin font-caption-h2 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 32px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #0f5f5c;
+}
+
+@mixin font-caption-h4 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #0f5f5c;
+}
+
+@mixin font-caption-h5 {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #0f5f5c;
+}
+
+@mixin header-text {
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+@mixin button {
+    border-radius: 2px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        background-color: lighten($color: rgba(255, 255, 255, 0.445), $amount: 50);
+    }
+    &:active {
+        background-color: darken($color: rgba(173, 173, 173, 0.445), $amount: 50);
+    }
+}
+@mixin grid($cols, $margin) {
+    float: left;
+   // background-color: bisque;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    width: 45%;
+    //width: ((100% - (($cols - 1) * $margin)) / $cols);
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@mixin icons {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-image: url(../img/sprites.jpg);
+} 
+
+@mixin link($link, $hover, $active, $visited) {
+    font-size: 24px;
+    color: $link;
+    &:hover {
+        color: $hover;
+    }
+    &:active {
+        color: $active;
+    }
+    &:visited {
+        color: $visited;
+    }
+}
