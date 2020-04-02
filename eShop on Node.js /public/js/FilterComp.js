@@ -14,12 +14,6 @@ Vue.component('filter-el', {
     `
 })
 
-// @submit.prevent - отменяем стандартные действия
-// $refs - свойство, которое ссылается на нашу верстку <products ref="products"></products>
-// v-model="userSearch" - связь между версткой и компонентом userSearch: ''
-// Можно использовать свойство props - для доступа к внешним свойствам компонентов
-
-
 Vue.component('category', {
     data() {
       return {
