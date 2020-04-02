@@ -118,14 +118,14 @@ header a:hover {
     right: 79px;
     width: 15px; 
     height: 15px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.62); /* Добавляем тень для уголка */
-    z-index: -1; /* Прячем за основным блоком */
-    transform: rotate(45deg); /* Поворачиваем на 45º */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.62); 
+    z-index: -1; 
+    transform: rotate(45deg); 
     -webkit-transform: rotate(45deg);
 }
 .cart-block:before {
-    z-index: 1; /* Накладываем поверх, чтобы скрыть следы тени */
-    box-shadow: none; /* Прячем тень */
+    z-index: 1; 
+    box-shadow: none; 
 }
 .del-btn{
     margin-top: 5px;
@@ -340,7 +340,7 @@ header a:hover {
 .contact-block {
     display: flex;
     flex-direction: column;
-    width: 250px;       /*243 275 254*/
+    width: 250px;       
     color: #f5f5f5;
     font-size: 13px;
     line-height: 20px;
