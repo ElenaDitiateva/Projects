@@ -1,0 +1,156 @@
+body {
+  margin: 0; }
+
+.earth {
+  height: 100vh;
+  background-image: url(img/bg_earth.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: center; }
+
+@keyframes toggle {
+  0% {
+    opacity: 0; }
+  12% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    z-index: -1; } }
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes hide {
+  100% {
+    z-index: -1; } }
+label {
+  position: absolute; }
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -99999px;
+  visibility: hidden; }
+
+.far {
+  color: orange;
+  font-size: 20px; }
+
+.bulb1 {
+  left: 39vw;
+  top: 70vh;
+  animation: toggle 5s linear 1s 1 both; }
+
+.bulb2 {
+  left: 48vw;
+  top: 18vh;
+  animation: toggle 5s linear 2s 1 both; }
+
+.bulb3 {
+  left: 70vw;
+  top: 85vh;
+  animation: toggle 5s linear 3s 1 both; }
+
+.bulb4 {
+  left: 62vw;
+  top: 65vh;
+  animation: toggle 5s linear 4s 1 both; }
+
+.bulb5 {
+  left: 46vw;
+  top: 1vh;
+  animation: toggle 5s linear 5s 1 both; }
+
+.bulb6 {
+  left: 78vw;
+  top: 78vh;
+  animation: toggle 5s linear 6s 1 both; }
+
+.bulb7 {
+  left: 48vw;
+  top: 10vh;
+  animation: toggle 5s linear 7s 1 both; }
+
+.bulb8 {
+  left: 43vw;
+  top: 19vh;
+  animation: toggle 5s linear 8s 1 both; }
+
+.bulb9 {
+  left: 7vw;
+  top: 25vh;
+  animation: toggle 5s linear 9s 1 both; }
+
+.bulb10 {
+  left: 68vw;
+  top: 51vh;
+  animation: toggle 5s linear 10s 1 both; }
+
+.bulb11 {
+  left: 13vw;
+  top: 83vh;
+  animation: toggle 5s linear 11s 1 both; }
+
+.bulb12 {
+  left: 64vw;
+  top: 87vh;
+  animation: toggle 5s linear 12s 1 both; }
+
+.bulb13 {
+  left: 85vw;
+  top: 64vh;
+  animation: toggle 5s linear 13s 1 both; }
+
+.bulb14 {
+  left: 53vw;
+  top: 5vh;
+  animation: toggle 5s linear 14s 1 both; }
+
+.bulb15 {
+  left: 16vw;
+  top: 76vh;
+  animation: toggle 5s linear 15s 1 both; }
+
+.bulb16 {
+  left: 55vw;
+  top: 88vh;
+  animation: toggle 5s linear 16s 1 both; }
+
+.bulb17 {
+  left: 38vw;
+  top: 75vh;
+  animation: toggle 5s linear 17s 1 both; }
+
+.bulb18 {
+  left: 15vw;
+  top: 75vh;
+  animation: toggle 5s linear 18s 1 both; }
+
+.bulb19 {
+  left: 71vw;
+  top: 64vh;
+  animation: toggle 5s linear 19s 1 both; }
+
+.bulb20 {
+  left: 54vw;
+  top: 33vh;
+  animation: toggle 5s linear 20s 1 both; }
+
+input[type="checkbox"]:checked + label .far {
+  color: black;
+  animation: fade 1s linear 0s 1 both;
+  animation: hide 1s linear 2s 1 both; }
+
+input[type="checkbox"]:checked {
+  counter-increment: score; }
+
+.count:after {
+  content: counter(score);
+  position: absolute;
+  left: 50%;
+  color: white;
+  bottom: 16px;
+  font-size: 22px; }
+
+/*# sourceMappingURL=style.css.map */

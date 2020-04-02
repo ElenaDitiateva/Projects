@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+}
+
+.earth {
+    height: 100vh;
+    background-image: url(img/bg_earth.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+@keyframes toggle {
+    0% {
+        opacity: 0;
+    }
+    12% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        z-index: -1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    100% {
+        z-index: -1;
+    }
+}
+
+label {
+    position: absolute;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -99999px;
+    visibility: hidden;
+}
+
+.far {
+    color: orange;
+    font-size: 20px;
+}
+
+@for $i from 1 through 20 {
+    .bulb#{$i} {
+        left: random(90) + vw; 
+        top: random(90) + vh; 
+        animation: toggle 5s linear $i*1s 1 both;
+    } 
+}
+
+input[type="checkbox"]:checked + label .far {
+    color: black;
+    animation: fade 1s linear 0s 1 both;
+    animation: hide 1s linear 2s 1 both;
+}
+
+input[type="checkbox"]:checked {
+    counter-increment: score;
+}
+
+.count:after {
+    content: counter(score);
+    position: absolute;
+    left: 50%;
+    color: white;
+    bottom: 16px;
+    font-size: 22px;
+}

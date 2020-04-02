@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes dogWalk {
+    0% {
+        left: 5%;
+    }
+    100% {
+        left: 30%;
+    }
+}
+
+@keyframes duckFly {
+    0% {
+        left: -60px;
+        top: 50%;
+    }
+    25% {
+        left: 25%;
+        top: 20%;
+    }
+    50% {
+        left: 50%;
+        top: 70%;
+    }
+    75% {
+        left: 75%;
+        top: 35%;
+    }
+    100% {
+        left: 100%;
+        top: 55%;
+    }
+}
+
+@keyframes duckFlyTwo {
+    0% {
+        left: -60px;
+        top: 10%;
+    }
+    25% {
+        left: 25%;
+        top: 40%;
+        transform: rotate(360deg)
+    }
+    50% {
+        left: 50%;
+        top: 60%;
+    }
+    75% {
+        left: 75%;
+        top: 40%;
+    }
+    100% {
+        left: 100%;
+        top: 55%;
+    }
+}
+
+@keyframes duckFlyThree {
+    0% {
+        left: -60px;
+        top: 40%;
+    }
+    25% {
+        left: 25%;
+        top: 20%;
+    }
+    50% {
+        left: 50%;
+        top: 40%;
+    }
+    75% {
+        left: 75%;
+        top: 10%;
+    }
+    100% {
+        left: 100%;
+        top: 30%;
+    }
+}
+
+.map {
+    background-image: url(img/bg.jpeg);
+    height: 100vh;
+    background-position: bottom;
+    position: relative;
+    background-size: cover;
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+    left: -99999px;
+    z-index: -5;
+    position: absolute;
+}
+
+.dog {
+    width: 100px;
+    height: 100px;
+    background-image: url(img/dog.gif);
+    background-size: contain;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    animation: dogWalk 15s ease-in-out 0s 1 normal;
+}
+
+.duck {
+    width: 60px;
+    height: 60px;
+    background-image: url(img/duck.gif);
+    display: block;
+    position: absolute;
+    left: -60px;
+    opacity: 1;
+    transition: opacity .2s;
+}
+
+input[type="checkbox"]:checked {
+    counter-increment: score;
+}
+
+input[type="checkbox"]:checked+.duck {
+    opacity: 0;
+}
+
+.count::after {
+    content: counter(score);
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.duck1 {
+    animation: duckFly 5s ease 0s 1 normal;
+}
+
+.duck2 {
+    animation: duckFlyTwo 7s ease 1s 1 normal;
+}
+
+.duck3 {
+    animation: duckFlyThree 5s ease-in 3s 1 normal;
+}
+.duck4 {
+    animation: duckFly 5s ease 5s 1 normal;
+}
+
+.duck5 {
+    animation: duckFlyTwo 7s ease 6s 1 normal;
+}
+
+.duck6 {
+    animation: duckFlyThree 5s ease 8s 1 normal;
+}
