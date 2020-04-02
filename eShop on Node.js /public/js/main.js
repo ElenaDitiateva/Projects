@@ -1,17 +1,15 @@
 const API = 'https://raw.githubusercontent.com/ElenaDitiateva/Project_1/dev/json';
 
-const app = new Vue({       //app - объект класса Vue
+const app = new Vue({       
     el: '#app',
     data: {
         userSearch: '',
     },
-    //components: {cart, products, filter_el}, - компоненты убрать?
     methods: {
         getJson(url){
             return fetch(url)
                 .then(result => result.json())
                 .catch(error => {
-                    // console.log(error)
                     this.$refs.error.text = error;
                 })
         },
@@ -25,7 +23,6 @@ const app = new Vue({       //app - объект класса Vue
             })
                 .then(result => result.json())
                 .catch(error => {
-                    // console.log(error)
                     this.$refs.error.text = error;
                 })
         },
