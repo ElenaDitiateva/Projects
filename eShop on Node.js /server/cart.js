@@ -1,16 +1,14 @@
-let add = (cart, req) => {          //добавляем товары в корзину
-    cart.contents.push(req.body);   //обращаемся к массиву contents в файле cart.json, вставляем в верстку body //req.body - то, что приходит из нашего запроса
-    return JSON.stringify(cart, null, 4);   //преобразовываем объект в строку
+let add = (cart, req) => {          
+    cart.contents.push(req.body);   
+    return JSON.stringify(cart, null, 4);  
 };
-let change = (cart, req) => {       //изменяем товары в корзине
-    let find = cart.contents.find(el => el.id_product === +req.params.id);  //ищем по id наличие товаров в корзине
+let change = (cart, req) => {       
+    let find = cart.contents.find(el => el.id_product === +req.params.id);  
     find.quantity += req.body.quantity;
     return JSON.stringify(cart, null, 4);
 };
 
-module.exports = {  //экспортируем модули работы с корзиной
+module.exports = {  
     add,
     change
 };
-
-//req - запрос

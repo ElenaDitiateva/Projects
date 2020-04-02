@@ -1,12 +1,12 @@
-const cart = require('./cart');     //импортировали модуль cart
+const cart = require('./cart');     
 const fs = require('fs');
 
-const actions = {       //возможные действия
-    add: cart.add,      //добавление товаров
-    change: cart.change     //изменение товаров
+const actions = {       
+    add: cart.add,     
+    change: cart.change     
 };
 
-let handler = (req, res, action, file) => {         // *!* принимаем параметры функции handler из файла cartRouter.js (из стр.15-20)
+let handler = (req, res, action, file) => {         
     fs.readFile(file, 'utf-8', (err, data)=> {
         if(err){
             res.sendStatus(404, JSON.stringify({result:0, text: err}));
@@ -16,7 +16,7 @@ let handler = (req, res, action, file) => {         // *!* принимаем п
                 if(err){
                     res.sendStatus(404, JSON.stringify({result:0, text: err}));
                 } else {
-                    res.send(JSON.stringify({result: 1}))   //возвращаем обновленную строку в файле userCart.json
+                    res.send(JSON.stringify({result: 1}))   
                 }
             })
         }
