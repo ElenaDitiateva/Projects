@@ -1,4 +1,4 @@
-const API = 'https://raw.githubusercontent.com/ElenaDitiateva/Project_1/dev/json';
+const API = 'https://raw.githubusercontent.com/ElenaDitiateva/Project_1/dev/json'; 
 
 const app = new Vue({       
     el: '#app',
